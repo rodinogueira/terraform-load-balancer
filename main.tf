@@ -165,6 +165,10 @@ resource "aws_instance" "backend_instance" {
   user_data = <<-EOF
     #!/bin/bash
     sudo yum update -y
+
+    # Instalar Git
+    sudo yum install -y git
+    
     curl -sL https://rpm.nodesource.com/setup_16.x | sudo bash -
     sudo yum install -y nodejs
 
