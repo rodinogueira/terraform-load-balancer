@@ -185,7 +185,7 @@ resource "aws_instance" "backend_instance" {
     sudo systemctl start mongod
     sudo systemctl enable mongod
 
-    git clone https://github.com/rodinogueira/market-place-nodejs.git /home/ec2-user/backend
+    git clone https://github.com/rodinogueira/pm-backend.git /home/ec2-user/backend
     cd /home/ec2-user/backend
     npm install
     npm start &
